@@ -5,12 +5,14 @@ class Pantalla{
         this.posX = posX;
         this.posY = posY;
         this.bg = bg;
+        this.current = loadImage(bg);
+        this.imgBg = loadImage('./recursos/baseBg.jpg');
+        console.log(bg);
     }
 
-    pintarPantalla(){
-        this.bg == null ? 
-        image(loadImage(this.bg),this.posX,this.posY) 
-        : image(loadImage('./recursos/baseBg.jpg',this.posX,this.posY,width,height),
-        text("No hay lienzo",200,250));
+      pintarPantalla (){
+
+        image((this.bg==null? this.imgBg: this.current ),this.posY,this.posX,width,height);
+       
     }
 }
