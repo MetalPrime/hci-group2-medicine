@@ -5,7 +5,7 @@ function setup() {
   logica = new Logica();
   pantalla = 0;
   initialPantalla = new Pantalla(0, 0, './recursos/clinicaBG.png');
-  instruccionesPantalla = new Pantalla(0,0);
+  instruccionesPantalla = new Pantalla(0,0,);
 
 }
 
