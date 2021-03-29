@@ -15,10 +15,12 @@ class Pantalla {
 
     }
 
-    pintarBtn(posX, posY, sizeX, sizeY,text) {
+    pintarBtn(posX, posY, sizeX, sizeY,stirng) {
         fill(255,0,0);
         rect(posX,posY,sizeX,sizeY);
-        //text(text,posX,posY);
+        fill(0);
+        textSize(20);
+        text(stirng,posX+sizeX/3,posY+sizeY/1.5);
     }
 
     sgtePantalla(pantalla) {

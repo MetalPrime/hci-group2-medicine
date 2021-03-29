@@ -22,6 +22,8 @@ function draw() {
     case 1:
       //instruciones
       instruccionesPantalla.pintarPantalla();
+      instruccionesPantalla.pintarBtn(200,200,100,50,"Sgte");
+
       break;
     case 2:
       //nivel uno
@@ -39,7 +41,7 @@ function mousePressed() {
       pantalla = initialPantalla.passSgtePantalla(200,200,100,50,pantalla);
       break;
     case 1:
-
+      pantalla = instruccionesPantalla.passSgtePantalla(200,200,100,50,pantalla);
       break;
     case 2:
 
