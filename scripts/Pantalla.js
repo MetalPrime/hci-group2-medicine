@@ -7,6 +7,8 @@ class Pantalla {
         this.bg = bg;
         this.current = loadImage(bg);
         this.imgBg = loadImage('./recursos/baseBg.jpg');
+        this.flechaBtn = loadImage('./recursos/flecha.png');
+
     }
 
     pintarPantalla() {
@@ -15,12 +17,11 @@ class Pantalla {
 
     }
 
-    pintarBtn(posX, posY, sizeX, sizeY,stirng) {
-        fill(255,0,0);
-        rect(posX,posY,sizeX,sizeY);
-        fill(0);
-        textSize(20);
-        text(stirng,posX+sizeX/3,posY+sizeY/1.5);
+    pintarBtn(posX, posY, sizeX, sizeY) {
+        
+        image(this.flechaBtn,posX,posY,sizeX,sizeY);
+        
+       
     }
 
     sgtePantalla(pantalla) {

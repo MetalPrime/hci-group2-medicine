@@ -3,7 +3,7 @@ let pantalla, logica;
 function setup() {
   createCanvas(1280, 720);
   logica = new Logica();
-  pantalla = 0;
+  pantalla = 2;
   initialPantalla = new Pantalla(0, 0, './recursos/clinicaBG.png');
   instruccionesPantalla = new Pantalla(0,0,);
 
@@ -17,12 +17,12 @@ function draw() {
     case 0:
       //play
       initialPantalla.pintarPantalla();
-      initialPantalla.pintarBtn(200,200,100,50,"Sgte");
+      initialPantalla.pintarBtn(1150,300,100,50,"Sgte");
       break;
     case 1:
       //instruciones
       instruccionesPantalla.pintarPantalla();
-      instruccionesPantalla.pintarBtn(200,200,100,50,"Sgte");
+      instruccionesPantalla.pintarBtn(1150,300,100,50,"Sgte");
 
       break;
     case 2:
@@ -38,10 +38,10 @@ function draw() {
 function mousePressed() {
   switch (pantalla) {
     case 0:
-      pantalla = initialPantalla.passSgtePantalla(200,200,100,50,pantalla);
+      pantalla = initialPantalla.passSgtePantalla(1150,300,100,50,pantalla);
       break;
     case 1:
-      pantalla = instruccionesPantalla.passSgtePantalla(200,200,100,50,pantalla);
+      pantalla = instruccionesPantalla.passSgtePantalla(1150,300,100,50,pantalla);
       break;
     case 2:
 
