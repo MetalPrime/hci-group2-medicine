@@ -2,13 +2,14 @@
 class Logica{
   
   constructor(){
-    //this.nivel1 = new Nivel1();
-    console.log(this.nivel1);
-    this.paciente = new Paciente1()
+    this.nivel1 = new Nivel1(0,0);
+    
+    this.paciente = new Paciente1(450,260,"./recursos/pacientes/p3Base.png",false,500,300);
   }
 
   pintarNivel1(){
-    this.paciente.pintarPaciente1(0,0,"./recursos/pacientes/p3Base.png",false,500,300);
+    this.nivel1.pintarBg();
+    this.paciente.pintar();
   }
 
 

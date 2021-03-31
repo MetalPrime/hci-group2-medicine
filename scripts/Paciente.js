@@ -6,13 +6,14 @@ class Paciente{
         this.estado = estado;
         this.tamX = tamX;
         this.tamY = tamY;
-      
+        this.loadImg = loadImage(imgPaciente);
+        this.illness = []
        
     }
 
     pintar(){
       
-       image(this.imgPaciente,this.posX,this.posY);
+       image(this.loadImg,this.posX,this.posY);
         
     }
 

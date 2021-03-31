@@ -3,6 +3,7 @@ class Nivel{
         this.posX=posX;
         this.posY=posY;
         this.bg = loadImage('./recursos/clinicaBG.png');
+        this.medicine = []
     }
 
     pintarBg(){
