@@ -8,8 +8,10 @@ class Logica{
   }
 
   pintarNivel1(){
+    imageMode(CORNER);
     this.nivel1.pintarBg();
     this.paciente.pintar();
+    this.paciente.pintarEnfermedad();
   }
 
 
