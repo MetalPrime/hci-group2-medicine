@@ -7,7 +7,7 @@ class Paciente{
         this.tamX = tamX;
         this.tamY = tamY;
         this.loadImg = loadImage(imgPaciente);
-        this.illness = []
+        this.illness = [];
        
     }
 
