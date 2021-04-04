@@ -3,9 +3,9 @@ let pantalla, logica;
 function setup() {
   createCanvas(1280, 720);
   logica = new Logica();
-  pantalla = 2;
+  pantalla = 0;
   initialPantalla = new Pantalla(0, 0, './recursos/clinicaBG.png');
-  instruccionesPantalla = new Pantalla(0,0,);
+  instruccionesPantalla = new Pantalla(0,0,'./recursos/Pantalla_guia.jpg');
 
 }
 
