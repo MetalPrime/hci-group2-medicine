@@ -3,7 +3,7 @@ let pantalla, logica;
 function setup() {
   createCanvas(1280, 720);
   logica = new Logica();
-  pantalla = 0;
+  pantalla = 2;
   initialPantalla = new Pantalla(0, 0, './recursos/Logo__m2.png');
   instruccionesPantalla = new Pantalla(0,0,'./recursos/Pantalla__guia.jpg');
 

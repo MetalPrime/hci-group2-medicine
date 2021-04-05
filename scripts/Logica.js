@@ -12,6 +12,7 @@ class Logica{
     this.nivel1.pintarBg();
     this.paciente.pintar();
     this.paciente.pintarEnfermedad();
+    this.nivel1.pintarMedicina();
   }
 
 

@@ -20,4 +20,29 @@ class Paciente{
         
     }
 
+    getPosX(){
+        return this.posX;
+    }
+    getPosY(){
+        return this.posY;
+    }
+    setPosX(posX){
+        this.posX = posX;
+    }
+    setPosY(posY){
+        this.posY = posY;
+    }
+
+    getTamX(){
+        return this.tamX;
+    }
+    getTamY(){
+        return this.tamY;
+    }
+    setTamX(tamX){
+        this.tamX = tamX;
+    }
+    setTamY(tamY){
+        this.tamY = tamY;
+    }
 }
