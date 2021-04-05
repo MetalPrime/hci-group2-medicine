@@ -8,6 +8,7 @@ class Pantalla {
         this.current = loadImage(bg);
         this.imgBg = loadImage('./recursos/baseBg.jpg');
         this.flechaBtn = loadImage('./recursos/flecha.png');
+        this.jugarBtn = loadImage('./recursos/Boton--jugar.png');
 
     }
 
@@ -20,6 +21,13 @@ class Pantalla {
     pintarBtn(posX, posY, sizeX, sizeY) {
         
         image(this.flechaBtn,posX,posY,sizeX,sizeY);
+        
+       
+    }
+
+    pintarBtnJugar(posX, posY, sizeX, sizeY) {
+        
+        image(this.jugarBtn,posX,posY,sizeX,sizeY);
         
        
     }

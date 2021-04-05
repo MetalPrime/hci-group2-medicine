@@ -6,7 +6,7 @@ class Nivel{
         this.medicines = [];
         
         for(let i=0; i<5; i++){
-            this.medicines[i] = new Medicine(null,(150*i)+150,500,100,100);
+            this.medicines[i] = new Medicine((150*i)+150,500,100,100);
             
             
         }
@@ -18,6 +18,8 @@ class Nivel{
         for(let i=0; i<5; i++){
            
             this.medicines[i].pintar();
+
+            
         }
         
     }
