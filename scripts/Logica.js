@@ -16,5 +16,8 @@ class Logica{
   }
 
 
+  moverObjetos(){
+    this.nivel1.moverObjetos();
+  }
 
 }

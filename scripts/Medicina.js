@@ -44,6 +44,20 @@ class Medicine {
         
     }
 
+    moverElement(){
+        if(mouseX>this.posX && mouseX<(this.posX+this.tamX)
+        && mouseY>this.posY && mouseY<(this.posY+this.tamY)
+        ){
+            this.setPosX(mouseX);
+            this.setPosY(mouseY);
+            console.log("entro")
+        } else {
+            this.setPosX(this.posX);
+            this.setPosY(this.posY);
+            console.log("no entro")
+        }
+    }
+
 
 
 

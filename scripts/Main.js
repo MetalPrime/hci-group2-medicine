@@ -54,6 +54,26 @@ function mousePressed() {
       break;
   }
 }
+
+function mouseDragged(){
+  switch (pantalla) {
+    case 0:
+
+      break;
+    case 1:
+
+      break;
+    case 2:
+      logica.moverObjetos();
+      break;
+    case 3:
+
+      break;
+
+    default:
+      break;
+  }
+}
 function mouseReleased() {
   switch (pantalla) {
     case 0:

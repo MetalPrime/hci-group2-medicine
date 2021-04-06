@@ -30,4 +30,13 @@ class Nivel{
         }
     }
 
+    moverObjetos(){
+        for(let i=0; i<6; i++){
+           
+            this.medicines[i].moverElement();
+
+            
+        }
+    }
+
 }
