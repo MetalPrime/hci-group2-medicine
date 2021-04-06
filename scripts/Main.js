@@ -44,7 +44,7 @@ function mousePressed() {
       pantalla = instruccionesPantalla.passSgtePantalla(1150,650,100,50,pantalla);
       break;
     case 2:
-
+      logica.aceptarMover();
       break;
     case 3:
 
@@ -83,7 +83,7 @@ function mouseReleased() {
 
       break;
     case 2:
-
+      logica.soltarMover();
       break;
     case 3:
 
