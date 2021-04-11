@@ -7,8 +7,6 @@ class Nivel{
         
         for(let i=0; i<6; i++){
             this.medicines[i] = new Medicine((150*i)+150,500,100,100,i);
-            
-            
         }
         
       
@@ -30,12 +28,24 @@ class Nivel{
         }
     }
 
+    aceptarMover(){
+        for(let i=0; i<6; i++){
+            this.medicines[i].aceptarMover();
+        }
+    }
+
     moverObjetos(){
         for(let i=0; i<6; i++){
            
-            this.medicines[i].moverElement();
+            this.medicines[i].moverElemento();
 
             
+        }
+    }
+
+    soltarMover(){
+        for(let i=0; i<6; i++){
+            this.medicines[i].soltarMover();
         }
     }
 

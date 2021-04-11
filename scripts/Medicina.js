@@ -11,8 +11,9 @@ class Medicine {
         this.medicinaTosImg=loadImage('./recursos/medicina/Medicina__tos.png');
         this.medicinaDolorEstomagoImg=loadImage('./recursos/medicina/Medicina__dolorEstomago.png');
         this.medicinaDolorCabezaImg=loadImage('./recursos/medicina/Medicina__dolorCabeza.png');
-      
-      
+        this.basePosX = posX;
+        this.basePosY = posY;
+        this.aceptarMovimiento = false;
        
     }
 
@@ -44,20 +45,29 @@ class Medicine {
         
     }
 
-    moverElement(){
+    aceptarMover(){
         if(mouseX>this.posX && mouseX<(this.posX+this.tamX)
         && mouseY>this.posY && mouseY<(this.posY+this.tamY)
         ){
-            this.setPosX(mouseX);
-            this.setPosY(mouseY);
+            this.aceptarMovimiento = true;
+        }  
+    }
+
+    moverElemento(){
+        if(this.aceptarMovimiento === true){
+            this.posX = mouseX;
+            this.posY = mouseY;
             console.log("entro")
         } else {
-            this.setPosX(this.posX);
-            this.setPosY(this.posY);
+
+
             console.log("no entro")
         }
     }
 
+    soltarMover(){
+        this.aceptarMovimiento = false;
+    }
 
 
 

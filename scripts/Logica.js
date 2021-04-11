@@ -15,14 +15,16 @@ class Logica{
     this.nivel1.pintarMedicina();
   }
 
+  aceptarMover(){
+    this.nivel1.aceptarMover();
+  }
 
   moverObjetos(){
     this.nivel1.moverObjetos();
   }
 
-
-
-
-
+  soltarMover(){
+    this.nivel1.soltarMover();
+  }
 
 }
