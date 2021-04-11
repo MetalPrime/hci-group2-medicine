@@ -46,10 +46,8 @@ class Pantalla {
         if(mouseX>posX && mouseX<(posX+sizeX) && 
             mouseY>posY && mouseY<(posY+sizeY)){
                 
-                console.log("si entra"+pantalla);
                 return this.sgtePantalla(pantalla);
             } else{
-                console.log("no entra"+pantalla);
                 return pantalla;
             }
 

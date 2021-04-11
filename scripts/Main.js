@@ -28,6 +28,7 @@ function draw() {
     case 2:
       //nivel uno
       logica.pintarNivel1();
+
       break;
     case 3:
       break;
@@ -45,6 +46,7 @@ function mousePressed() {
       break;
     case 2:
       logica.aceptarMover();
+      pantalla = logica.passSgtePantalla(1150,650,100,50,pantalla);
       break;
     case 3:
 
