@@ -1,8 +1,8 @@
 class Paciente1 extends Paciente {
     constructor(posX,posY,imgPaciente, estado,tamX,tamY) {
         super(posX,posY,imgPaciente, estado,tamX,tamY);
-        this.r = random(4);
-        console.log(this.illness[floor(this.r)].base);
+        this.r = random(5);
+        console.log(this.illness[floor(this.r)].index);
 
     }
 
@@ -16,4 +16,7 @@ class Paciente1 extends Paciente {
         this.illness[floor(this.r)].pintar();
     }
 
+    getRandomIll() {
+        return this.illness[floor(this.r)].index;
+    }
 }

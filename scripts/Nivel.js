@@ -49,4 +49,21 @@ class Nivel{
         }
     }
 
+    funcionarMedicina(index, posX,posY,tamX,tamY){
+        
+        for(let i=0; i<this.medicines.length;i++){
+            if(this.medicines[i].getPosX()> posX && this.medicines[i].getPosX()< posX + tamX && 
+                this.medicines[i].getPosY()> posY && this.medicines[i].getPosY()< posY + tamY ){
+                    console.log("ent5rando");
+                    if(this.medicines[i].getIndex() === index){
+                        console.log('entro la medicina correcta');
+                    } else{
+                        console.log('no es la medicina correcta');
+                    }
+                } else {
+                   // console.log("no ent5rando");
+                }
+        }
+    }
+
 }

@@ -21,22 +21,28 @@ class Medicine {
 
         switch(this.index){
             case 0:
-                image(this.medicinaAlergiaImg,this.posX,this.posY,this.tamX,this.tamY);
+                image(this.medicinaDolorCabezaImg,this.posX,this.posY,this.tamX,this.tamY);
+
                 break;
             case 1:
-                image(this.medicinaFiebreImg,this.posX,this.posY,this.tamX,this.tamY);
+                image(this.medicinaDolorEstomagoImg,this.posX,this.posY,this.tamX,this.tamY);
+
                 break;
             case 2:
-                image(this.medicinaVertigoImg,this.posX,this.posY,this.tamX,this.tamY);
+                image(this.medicinaTosImg,this.posX,this.posY,this.tamX,this.tamY);
+
                 break;
             case 3:
-                image(this.medicinaTosImg,this.posX,this.posY,this.tamX,this.tamY);
+                image(this.medicinaFiebreImg,this.posX,this.posY,this.tamX,this.tamY);
+
                 break;
             case 4:
-                image(this.medicinaDolorCabezaImg,this.posX,this.posY,this.tamX,this.tamY);
+                image(this.medicinaVertigoImg,this.posX,this.posY,this.tamX,this.tamY);
+
                 break;
             case 5:
-                image(this.medicinaDolorEstomagoImg,this.posX,this.posY,this.tamX,this.tamY);
+                image(this.medicinaAlergiaImg,this.posX,this.posY,this.tamX,this.tamY);
+
                 break;
         }
         
@@ -57,11 +63,9 @@ class Medicine {
         if(this.aceptarMovimiento === true){
             this.posX = mouseX;
             this.posY = mouseY;
-            console.log("entro")
         } else {
 
 
-            console.log("no entro")
         }
     }
 
@@ -118,8 +122,12 @@ class Medicine {
     setTamY(tamY){
         this.tamY = tamY;
     }
-  
-    
+    getIndex(){
+        return this.index;
+    }
+    setIndex(index){
+        this.index = index;
+    }
 
 
 
