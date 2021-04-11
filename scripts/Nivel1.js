@@ -6,4 +6,22 @@ class Nivel1 extends Nivel {
     
     }
 
+
+
+    tiempoLimiteNivel1(){
+        setTimeout(pantallaBloqueada,60000);
+
+        
+
+        
+        
+    }
+
+    pantallaBloqueada(){
+        
+
+    }
+
+
+
 }
