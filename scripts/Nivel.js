@@ -6,7 +6,7 @@ class Nivel{
         this.medicines = [];
         
         for(let i=0; i<6; i++){
-            this.medicines[i] = new Medicine((150*i)+150,500,100,100,i);
+            this.medicines[i] = new Medicine((125*i)+250,650,75,75,i);
         }
         
       

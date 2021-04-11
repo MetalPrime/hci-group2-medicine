@@ -9,7 +9,7 @@ class Paciente{
         this.loadImg = loadImage(imgPaciente);
         this.illness = [];
         for(let i=0; i<4; i++){
-            this.illness[i] = new Enfermedad(`./recursos/pacientes/enfermedad/enfer${i}.png`,`./recursos/pacientes/caras/cara${i}.png`,`./recursos/pacientes/brazos/brazo${i}.png`,490,315,60,35);
+            this.illness[i] = new Enfermedad(`./recursos/pacientes/enfermedad/enfer${i}.png`,`./recursos/pacientes/caras/cara${i}.png`,490,315,60,35);
         }
        //
     }
