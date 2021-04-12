@@ -4,7 +4,7 @@ function setup() {
   createCanvas(1280, 720);
   logica = new Logica();
   pantalla = 3;
-  pacientes=0;
+  this.pacientes= logica.pacientes;
   initialPantalla = new Pantalla(0, 0, './recursos/Logo__m2.png');
   instruccionesPantalla = new Pantalla(0,0,'./recursos/instrucciones.png');
   guiaPantalla = new Pantalla(0,0,'./recursos/guia.jpg');
@@ -42,14 +42,15 @@ function draw() {
     
     case 4:
       //nivel uno
+      logica.timerOff();
+      logica.pintarNivelesBase();
+
       switch(pacientes){
         case 0:
-          logica.timerOff();
           logica.pintarNivel1();
-        
-          
           break;
         case 1:
+          logica.pintarNivel2();
           break;
         case 2:
           break;
@@ -91,6 +92,7 @@ function mousePressed() {
       break;
     case 4:
       logica.aceptarMover();
+      this.pacientes = logica.passSgteNivel(1150, 650, 100, 50, this.pacientes);
       
     if(dist(mouseX, mouseY, 50,660) < 100){
       logica.clicAyuda();

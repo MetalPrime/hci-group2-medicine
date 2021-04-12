@@ -14,7 +14,7 @@ class Paciente{
        //
     }
 
-    pintar(){
+    pintarPaciente(){
       
        image(this.loadImg,this.posX,this.posY);
         
@@ -44,5 +44,12 @@ class Paciente{
     }
     setTamY(tamY){
         this.tamY = tamY;
+    }
+
+    getEstado(){
+        return this.estado;
+    }
+    setEstado(estado){
+        this.estado = estado;
     }
 }

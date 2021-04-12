@@ -67,8 +67,10 @@ class Nivel{
                 this.medicines[i].getPosY()> posY && this.medicines[i].getPosY()< posY + tamY ){
                    
                     if(this.medicines[i].getIndex() === index){
+                        console.log("entra la medicina")
                         return true;
                     } else{
+                        console.log("no entra la medicina");
                         return false;
                     }
                 } 
