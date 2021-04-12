@@ -7,7 +7,7 @@ class Logica {
 
   constructor() {
     this.nivel1 = new Nivel1(0, 0);
-    this.darAltaBtn = loadImage('./recursos/altaBtn.jpg');
+    this.darAltaBtn = loadImage('./recursos/altaBtn.png');
     this.paciente = new Paciente1(450, 260, "./recursos/pacientes/p3Base.png", false, 500, 300);
     this.signoPregunta = loadImage('./recursos/signoPregunta.png');
     this.pacientesCurados = 0;

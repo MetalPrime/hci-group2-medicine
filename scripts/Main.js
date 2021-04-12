@@ -46,7 +46,7 @@ function draw() {
         case 0:
           logica.timerOff();
           logica.pintarNivel1();
-          // pantalla=logica.getPantalla2();
+        
           
           break;
         case 1:
