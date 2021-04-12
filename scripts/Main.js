@@ -53,6 +53,7 @@ function draw() {
           logica.pintarNivel2();
           break;
         case 2:
+          logica.pintarNivel3();
           break;
         case 3:
           break;

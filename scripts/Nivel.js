@@ -77,6 +77,25 @@ class Nivel{
         }
     }
 
+    funcionarMedicina2(index1, index2, posX,posY,tamX,tamY){
+        for(let i=0; i<this.medicines.length;i++){
+            if(this.medicines[i].getPosX()> posX && this.medicines[i].getPosX()< posX + tamX && 
+                this.medicines[i].getPosY()> posY && this.medicines[i].getPosY()< posY + tamY ){
+                   
+                    if(this.medicines[i].getIndex() === index1){
+                        if(this.medicines[i].getIndex() === index2){
+                            console.log("entra la medicina")
+                            return true;
+                        } else {
+                            console.log("no entra la medicina");
+                            return false;
+                        }
+                        
+                    } 
+                } 
+        }
+    }
+
 
 
 }

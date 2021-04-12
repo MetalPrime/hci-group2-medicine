@@ -12,6 +12,7 @@ class Logica {
     this.darAltaBtn = loadImage('./recursos/altaBtn.png');
     this.paciente1 = new Paciente1(450, 260, "./recursos/pacientes/p3Base.png", false, 500, 300);
     this.paciente2 = new Paciente1(450, 260, "./recursos/pacientes/p2Base.png", false, 500, 300);
+    this.paciente3 = new Paciente2(450, 260, "./recursos/pacientes/p1Base.png", false, 500, 300);
     this.signoPregunta = loadImage('./recursos/signoPregunta.png');
     this.pacientesCurados = 0;
     this.pacientesNoCurados = 0;
@@ -53,7 +54,6 @@ class Logica {
     
     this.nivel1.funcionarMedicina(this.paciente1.getRandomIll(), this.paciente1.getPosX(), this.paciente1.getPosY(), this.paciente1.getTamX(), this.paciente1.getTamY());
     this.pintarBtn(1150, 650, 100, 50);
-      //this.passSgteNivel(1150, 650, 100, 50, this.pacientes);
       console.log(this.pacientes);
     
     
@@ -82,6 +82,30 @@ class Logica {
     this.nivel1.funcionarMedicina(this.paciente2.getRandomIll(), this.paciente2.getPosX(), this.paciente2.getPosY(), this.paciente2.getTamX(), this.paciente2.getTamY());
     this.pintarBtn(1150, 650, 100, 50);
 
+  }
+
+  pintarNivel3() {
+    imageMode(CORNER);
+    this.paciente3.pintarPaciente();
+    this.paciente3.pintarEnfermedad();
+
+    if (pedirAyuda == true) {
+      this.pintarBtnAyuda();
+    }
+    if (clickAyuda == true) {
+      this.nivel1.pintarAyuda();
+      this.ayudaDesaparece();
+    }
+
+    fill(52, 179, 179);
+    noStroke();
+    rect(50, 20, 100, 50, 20, 20, 20, 20);
+
+    fill(255);
+    textSize(24);
+    text(timer2, 70, 50);
+    this.nivel1.funcionarMedicina2(this.paciente3.getRandomIll(),this.paciente3.getRandomIll2, this.paciente3.getPosX(), this.paciente3.getPosY(), this.paciente2.getTamX(), this.paciente2.getTamY());
+    this.pintarBtn(1150, 650, 100, 50);
   }
 
   aceptarMover() {
