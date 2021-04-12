@@ -3,6 +3,9 @@ class Nivel{
         this.posX=posX;
         this.posY=posY;
         this.bg = loadImage('./recursos/clinicaBG.png');
+        this.helpPopup = loadImage('./recursos/enferPopup.png');
+        this.charola = loadImage('./recursos/medicina/Charola--medicina.png');
+
         this.medicines = [];
         
         for(let i=0; i<6; i++){
@@ -14,6 +17,7 @@ class Nivel{
 
     pintarBg(){
         image(this.bg, this.posX ,this.posY); 
+        image(this.charola, 130 ,620, 860, 99); 
         
         
     }
@@ -26,6 +30,13 @@ class Nivel{
 
             
         }
+    }
+
+    pintarAyuda(){
+        image(this.helpPopup, 560,600); 
+        
+
+
     }
 
     aceptarMover(){
@@ -63,5 +74,7 @@ class Nivel{
                 } 
         }
     }
+
+
 
 }
