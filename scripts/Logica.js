@@ -13,6 +13,10 @@ class Logica {
     this.paciente1 = new Paciente1(450, 260, "./recursos/pacientes/p3Base.png", false, 500, 300);
     this.paciente2 = new Paciente1(450, 260, "./recursos/pacientes/p2Base.png", false, 500, 300);
     this.paciente3 = new Paciente2(450, 260, "./recursos/pacientes/p1Base.png", false, 500, 300);
+    this.paciente4 = new Paciente2(450, 260, "./recursos/pacientes/p3Base.png", false, 500, 300);
+    this.paciente5 = new Paciente3(450, 260, "./recursos/pacientes/p2Base.png", false, 500, 300);
+    this.paciente6 = new Paciente3(450, 260, "./recursos/pacientes/p1Base.png", false, 500, 300);
+
     this.signoPregunta = loadImage('./recursos/signoPregunta.png');
     this.pacientesCurados = 0;
     this.pacientesNoCurados = 0;
@@ -104,7 +108,79 @@ class Logica {
     fill(255);
     textSize(24);
     text(timer2, 70, 50);
-    this.nivel1.funcionarMedicina2(this.paciente3.getRandomIll(),this.paciente3.getRandomIll2, this.paciente3.getPosX(), this.paciente3.getPosY(), this.paciente2.getTamX(), this.paciente2.getTamY());
+    this.nivel1.funcionarMedicina2(this.paciente3.getRandomIll(),this.paciente3.getRandomIll2, this.paciente3.getPosX(), this.paciente3.getPosY(), this.paciente3.getTamX(), this.paciente3.getTamY());
+    this.pintarBtn(1150, 650, 100, 50);
+  }
+
+  pintarNivel4(){
+    imageMode(CORNER);
+    this.paciente4.pintarPaciente();
+    this.paciente4.pintarEnfermedad();
+
+    if (pedirAyuda == true) {
+      this.pintarBtnAyuda();
+    }
+    if (clickAyuda == true) {
+      this.nivel1.pintarAyuda();
+      this.ayudaDesaparece();
+    }
+
+    fill(52, 179, 179);
+    noStroke();
+    rect(50, 20, 100, 50, 20, 20, 20, 20);
+
+    fill(255);
+    textSize(24);
+    text(timer2, 70, 50);
+    this.nivel1.funcionarMedicina2(this.paciente4.getRandomIll(),this.paciente4.getRandomIll2, this.paciente4.getPosX(), this.paciente4.getPosY(), this.paciente4.getTamX(), this.paciente4.getTamY());
+    this.pintarBtn(1150, 650, 100, 50);
+  }
+
+  pintarNivel5(){
+    imageMode(CORNER);
+    this.paciente5.pintarPaciente();
+    this.paciente5.pintarEnfermedad();
+
+    if (pedirAyuda == true) {
+      this.pintarBtnAyuda();
+    }
+    if (clickAyuda == true) {
+      this.nivel1.pintarAyuda();
+      this.ayudaDesaparece();
+    }
+
+    fill(52, 179, 179);
+    noStroke();
+    rect(50, 20, 100, 50, 20, 20, 20, 20);
+
+    fill(255);
+    textSize(24);
+    text(timer2, 70, 50);
+    this.nivel1.funcionarMedicina3(this.paciente5.getRandomIll(),this.paciente5.getRandomIll2, this.paciente5.getRandomIll3,this.paciente5.getPosX(), this.paciente5.getPosY(), this.paciente5.getTamX(), this.paciente5.getTamY());
+    this.pintarBtn(1150, 650, 100, 50);
+  }
+
+pintarNivel6(){
+    imageMode(CORNER);
+    this.paciente6.pintarPaciente();
+    this.paciente6.pintarEnfermedad();
+
+    if (pedirAyuda == true) {
+      this.pintarBtnAyuda();
+    }
+    if (clickAyuda == true) {
+      this.nivel1.pintarAyuda();
+      this.ayudaDesaparece();
+    }
+
+    fill(52, 179, 179);
+    noStroke();
+    rect(50, 20, 100, 50, 20, 20, 20, 20);
+
+    fill(255);
+    textSize(24);
+    text(timer2, 70, 50);
+    this.nivel1.funcionarMedicina3(this.paciente6.getRandomIll(),this.paciente6.getRandomIll2, this.paciente6.getRandomIll3,this.paciente6.getPosX(), this.paciente6.getPosY(), this.paciente6.getTamX(), this.paciente6.getTamY());
     this.pintarBtn(1150, 650, 100, 50);
   }
 
