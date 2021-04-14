@@ -55,12 +55,12 @@ class Logica {
     textSize(24);
     text(timer2, 70, 50);
 
-    
-    
-    
-      
-    
-    
+
+
+
+
+
+
   }
 
   pintarNivel2() {
@@ -83,8 +83,8 @@ class Logica {
     fill(255);
     textSize(24);
     text(timer2, 70, 50);
-    
-    
+
+
 
   }
 
@@ -108,11 +108,10 @@ class Logica {
     fill(255);
     textSize(24);
     text(timer2, 70, 50);
-    this.nivel1.funcionarMedicina2(this.paciente3.getRandomIll(),this.paciente3.getRandomIll2, this.paciente3.getPosX(), this.paciente3.getPosY(), this.paciente3.getTamX(), this.paciente3.getTamY());
-    
+
   }
 
-  pintarNivel4(){
+  pintarNivel4() {
     imageMode(CORNER);
     this.paciente4.pintarPaciente();
     this.paciente4.pintarEnfermedad();
@@ -127,16 +126,15 @@ class Logica {
 
     fill(52, 179, 179);
     noStroke();
-    
+
 
     fill(255);
     textSize(24);
     text(timer2, 70, 50);
-    this.nivel1.funcionarMedicina2(this.paciente4.getRandomIll(),this.paciente4.getRandomIll2, this.paciente4.getPosX(), this.paciente4.getPosY(), this.paciente4.getTamX(), this.paciente4.getTamY());
     this.pintarBtn(1150, 650, 100, 50);
   }
 
-  pintarNivel5(){
+  pintarNivel5() {
     imageMode(CORNER);
     this.paciente5.pintarPaciente();
     this.paciente5.pintarEnfermedad();
@@ -156,11 +154,10 @@ class Logica {
     fill(255);
     textSize(24);
     text(timer2, 70, 50);
-    this.nivel1.funcionarMedicina3(this.paciente5.getRandomIll(),this.paciente5.getRandomIll2, this.paciente5.getRandomIll3,this.paciente5.getPosX(), this.paciente5.getPosY(), this.paciente5.getTamX(), this.paciente5.getTamY());
-    
+
   }
 
-pintarNivel6(){
+  pintarNivel6() {
     imageMode(CORNER);
     this.paciente6.pintarPaciente();
     this.paciente6.pintarEnfermedad();
@@ -180,8 +177,7 @@ pintarNivel6(){
     fill(255);
     textSize(24);
     text(timer2, 70, 50);
-    this.nivel1.funcionarMedicina3(this.paciente6.getRandomIll(),this.paciente6.getRandomIll2, this.paciente6.getRandomIll3,this.paciente6.getPosX(), this.paciente6.getPosY(), this.paciente6.getTamX(), this.paciente6.getTamY());
-    
+
   }
 
   aceptarMover() {
@@ -192,9 +188,34 @@ pintarNivel6(){
     this.nivel1.moverObjetos();
   }
 
-  soltarMover() {
-    this.nivel1.funcionarMedicina(this.paciente1.getRandomIll(), this.paciente1.getPosX(), this.paciente1.getPosY(), this.paciente1.getTamX(), this.paciente1.getTamY());
-    // this.nivel1.funcionarMedicina(this.paciente2.getRandomIll(), this.paciente2.getPosX(), this.paciente2.getPosY(), this.paciente2.getTamX(), this.paciente2.getTamY());
+  soltarMover(nivel) {
+    switch (nivel) {
+      case 0:
+        this.nivel1.funcionarMedicina(this.paciente1.getRandomIll(), this.paciente1.getPosX(), this.paciente1.getPosY(), this.paciente1.getTamX(), this.paciente1.getTamY());
+        break;
+      case 1:
+        this.nivel1.funcionarMedicina(this.paciente2.getRandomIll(), this.paciente2.getPosX(), this.paciente2.getPosY(), this.paciente2.getTamX(), this.paciente2.getTamY());
+
+        break;
+      case 2:
+        this.nivel1.funcionarMedicina2(this.paciente3.getRandomIll(), this.paciente3.getRandomIll2, this.paciente3.getPosX(), this.paciente3.getPosY(), this.paciente3.getTamX(), this.paciente3.getTamY());
+
+        break;
+      case 3:
+        this.nivel1.funcionarMedicina2(this.paciente4.getRandomIll(), this.paciente4.getRandomIll2, this.paciente4.getPosX(), this.paciente4.getPosY(), this.paciente4.getTamX(), this.paciente4.getTamY());
+
+        break;
+      case 4:
+        this.nivel1.funcionarMedicina3(this.paciente5.getRandomIll(), this.paciente5.getRandomIll2, this.paciente5.getRandomIll3, this.paciente5.getPosX(), this.paciente5.getPosY(), this.paciente5.getTamX(), this.paciente5.getTamY());
+
+        break;
+      case 5:
+        this.nivel1.funcionarMedicina3(this.paciente6.getRandomIll(), this.paciente6.getRandomIll2, this.paciente6.getRandomIll3, this.paciente6.getPosX(), this.paciente6.getPosY(), this.paciente6.getTamX(), this.paciente6.getTamY());
+
+        break;
+      default:
+        break;
+    }
     this.nivel1.soltarMover();
   }
 
@@ -218,16 +239,16 @@ pintarNivel6(){
 
 
 
-      if (mouseX > posX && mouseX < (posX + sizeX) &&
-        mouseY > posY && mouseY < (posY + sizeY)) {
+    if (mouseX > posX && mouseX < (posX + sizeX) &&
+      mouseY > posY && mouseY < (posY + sizeY)) {
 
-        // console.log("si entra" + pantalla);
-        return this.sgteNivel(pantalla);
-      } else {
-        // console.log("no entra" + pantalla);
-        return pantalla;
-      }
-    
+      // console.log("si entra" + pantalla);
+      return this.sgteNivel(pantalla);
+    } else {
+      // console.log("no entra" + pantalla);
+      return pantalla;
+    }
+
 
 
 

@@ -151,7 +151,8 @@ function mouseReleased() {
 
       break;
     case 4:
-      logica.soltarMover();
+      
+      logica.soltarMover(this.pacientes);
       break;
     
     case 5:
