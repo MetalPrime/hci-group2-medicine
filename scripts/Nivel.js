@@ -130,9 +130,9 @@ class Nivel {
                     if (this.medicines[i].getIndex() === index1 || this.medicines[i].getIndex() === index2 || this.medicines[i].getIndex() === index3) {
                         if (this.medicines[i].getIndex() === index1 || this.medicines[i].getIndex() === index2 || this.medicines[i].getIndex() === index3) {
                             this.puntos++;
-                        console.log(this.puntos);
-                        console.log("MEDICINA CORRECTA");
-                        return true;
+                            console.log(this.puntos);
+                            console.log("MEDICINA CORRECTA");
+                            return true;
                         } else {
                             this.errores++;
                             console.log(this.errores);
