@@ -44,6 +44,7 @@ function draw() {
       //nivel uno
       logica.timerOff();
       logica.pintarNivelesBase();
+      logica.pintarBtn(1150, 500, 100, 80,"paciente");
 
       switch(pacientes){
         case 0:
@@ -96,7 +97,7 @@ function mousePressed() {
       break;
     case 4:
       logica.aceptarMover();
-      this.pacientes = logica.passSgteNivel(1150, 650, 100, 50, this.pacientes);
+      this.pacientes = logica.passSgteNivel(1150, 500, 100, 80, this.pacientes);
       
     if(dist(mouseX, mouseY, 50,660) < 100){
       logica.clicAyuda();

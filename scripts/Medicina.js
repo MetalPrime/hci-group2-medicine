@@ -55,6 +55,7 @@ class Medicine {
         if(mouseX>this.posX-20 && mouseX<(this.posX+this.tamX+20)
         && mouseY>this.posY-20 && mouseY<(this.posY+this.tamY+20)
         ){
+        
             this.aceptarMovimiento = true;
         }  
     }
@@ -71,6 +72,8 @@ class Medicine {
 
     soltarMover(){
         this.aceptarMovimiento = false;
+        this.posX=this.basePosX;
+        this.posY=this.basePosY;
     }
 
 
