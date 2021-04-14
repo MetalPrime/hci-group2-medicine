@@ -7,7 +7,7 @@ class Pantalla {
         this.bg = bg;
         this.current = loadImage(bg);
         this.imgBg = loadImage('./recursos/baseBg.jpg');
-        this.flechaBtn = loadImage('./recursos/flecha.png');
+        this.flechaBtn = loadImage('./recursos/Boton--siguiente.png');
         this.jugarBtn = loadImage('./recursos/Boton--jugar.png');
 
     }
@@ -18,7 +18,7 @@ class Pantalla {
 
     }
 
-    pintarBtn(posX, posY, sizeX, sizeY) {
+    pintarBtnSiguiente(posX, posY, sizeX, sizeY) {
         
         image(this.flechaBtn,posX,posY,sizeX,sizeY);
         
@@ -38,18 +38,12 @@ class Pantalla {
     }
 
     passSgtePantalla(posX,posY,sizeX,sizeY,pantalla){
-        /*console.log(posY + " "+ mouseY);
-        console.log(mouseX>posX )
-        console.log(mouseX<(posX+sizeX) )
-        console.log(mouseY>posY )
-        console.log(mouseY<(posY+sizeY) )*/
+        
         if(mouseX>posX && mouseX<(posX+sizeX) && 
             mouseY>posY && mouseY<(posY+sizeY)){
                 
-                console.log("si entra"+pantalla);
                 return this.sgtePantalla(pantalla);
             } else{
-                console.log("no entra"+pantalla);
                 return pantalla;
             }
 

@@ -1,12 +1,12 @@
-class Paciente1 extends Paciente {
+class Paciente2 extends Paciente {
     constructor(posX,posY,imgPaciente, estado,tamX,tamY) {
         super(posX,posY,imgPaciente, estado,tamX,tamY);
         this.r = random(5);
-        console.log(this.illness[floor(this.r)].index);
+        this.g = random(5);
 
     }
 
-    pintarPaciente1() {
+    pintarPaciente2() {
         image(this.imgPaciente,this.posX,this.posY,this.tamX,this.tamY);
         
         
@@ -14,9 +14,14 @@ class Paciente1 extends Paciente {
 
     pintarEnfermedad() {
         this.illness[floor(this.r)].pintar();
+        this.illness[floor(this.g)].pintar();
     }
 
     getRandomIll() {
         return this.illness[floor(this.r)].index;
+    }
+
+    getRandomIll2() {
+        return this.illness[floor(this.g)].index;
     }
 }
