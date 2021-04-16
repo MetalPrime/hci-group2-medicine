@@ -3,13 +3,12 @@ let pantalla,logica;
 function setup() {
   createCanvas(1280, 720);
   logica = new Logica();
-  pantalla = 3;
+  pantalla = 0;
   this.pacientes= logica.pacientes;
   initialPantalla = new Pantalla(0, 0, './recursos/Logo__m2.png');
   instruccionesPantalla = new Pantalla(0,0,'./recursos/instrucciones.png');
   guiaPantalla = new Pantalla(0,0,'./recursos/guia.jpg');
   sintomasPantalla = new Pantalla(0,0,'./recursos/medicinas.jpg');
- 
 
 }
 
